@@ -16,6 +16,8 @@
         $consultaSQLbuscarplaca = "SELECT idVehiculo, tipoServicio FROM vehiculo WHERE placa='$placa'";
         $resultado = $transaccion->buscarBD($consultaSQLbuscarplaca);
 
+
+        //Verificar disponibilidad
         if ((count($resultado)==0 || $resultado[0]["tipoServicio"]=="Por horas") && $espaciosPorHoras==0) {
             echo "No hay espacios disponibles";
         }
@@ -80,5 +82,5 @@
         }
                
     }
-    //header("location:index.php");
+    header("location:index.php");
 ?>

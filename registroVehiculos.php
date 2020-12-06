@@ -18,9 +18,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Ingreso/Salida<span class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espacios.php">Disponibilidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadoParqueo.php">Vehículos Parqueados</a>
+                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="registroVehiculos.php">Vehículos Mensualidad</a>
-                    </li>                
+                        <a class="nav-link" href="registroVehiculos.php">Registro Mensualidad</a>
+                    </li>               
                 </ul>
                 <span class="navbar-text">
                     <h4>Parqueadero SARS COV-2</h4>
@@ -71,7 +77,7 @@
                         <button type="submit" class="btn btn-success btn-block" name="botonGuardar">Guardar</button>
                     </div>
                     <div class="col-sm-10 col-md-2">
-                        <button type="submit" class="btn btn-danger btn-block" name="botonEliminar">Eliminar</button>
+                    <a href="listadoMensualidad.php" class="btn btn-dark btn-block">Listado</a>
                     </div>
                 </div>                
             </form>
