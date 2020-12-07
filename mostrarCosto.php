@@ -29,26 +29,21 @@
         <?php
             include("claseBD.php");
             $transaccion = new BaseDatos();
-            $consultaSQL = "SELECT tipoServicio, placa, marca, modelo, color, nombreConductor FROM vehiculo 
-                    INNER JOIN vehiculoparqueo ON vehiculoparqueo.idVehiculo_vp = vehiculo.idVehiculo  
-                    WHERE idParqueo_vp=(SELECT MAX(idParqueo_vp) FROM vehiculoparqueo)";
+            $consultaSQL = "SELECT costo, fechaIngreso, fechaSalida FROM parqueo WHERE fechaSalida=(SELECT MAX(fechaSalida) FROM parqueo)";
             $resultado = $transaccion->buscarBD($consultaSQL);
 
         ?>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="card border-success bg-transparent mb-3" style="max-width: 18rem;">
+                <div class="card border-dark bg-transparent mb-3" style="max-width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Registro exitoso</h5>
-                        <p class="card-text">Tipo de servicio: <?= $resultado[0]["tipoServicio"] ?></p>
-                        <p class="card-text">Nombre del conductor: <?= $resultado[0]["nombreConductor"] ?></p>
-                        <p class="card-text">Placa: <?= $resultado[0]["placa"] ?></p>
-                        <p class="card-text">Marca: <?= $resultado[0]["marca"] ?></p>
-                        <p class="card-text">Modelo: <?= $resultado[0]["modelo"] ?></p>
-                        <p class="card-text">Color: <?= $resultado[0]["color"] ?></p>
+                        <h5 class="card-title">Parqueadero 2020</h5>
+                        <p class="card-text">El costo del del parqueo es $<?= $resultado[0]["costo"] ?></p>
+                        <p class="card-text">Fecha y hora de ingreso: <?= $resultado[0]["fechaIngreso"] ?></p>
+                        <p class="card-text">Fecha y hora de salida: <?= $resultado[0]["fechaSalida"] ?></p>
 
                     </div>
-                    <div class="card-footer bg-success border-success"><a href="index.html" class="btn btn-outline-light">Aceptar</a></div>
+                    <div class="card-footer bg-dark border-dark"><a href="index.html" class="btn btn-outline-light">Imprimir</a></div>
                 </div>
             </div>
         </div>

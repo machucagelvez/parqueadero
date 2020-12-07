@@ -1,6 +1,6 @@
 <?php
 
-    include("espacios.php");    
+    include("espacios.php");
     date_default_timezone_set("America/Bogota");
     $transaccion = new BaseDatos();           
     $parqueaderos = new Espacios();
@@ -51,7 +51,7 @@
                 $transaccion->guardarBD($consultaSQLVP, "agregar");
 
                 if ($resultado[0]["tipoServicio"]=="Mensualidad") {
-                    header("location:ingresado.html");
+                    header("location:datosVehiculo.php");
                 }
                 else {
                     header("location:ingresado.html");
@@ -59,7 +59,7 @@
             }
         }
         else {
-            header("location:yaExiste.html");
+            header("location:duplicado.html");
         }
     }
 
@@ -109,6 +109,6 @@
             $consultaSQLSalida = "UPDATE parqueo SET estado=0, fechaSalida='$fechaSalida', duracion='$duracion', costo='$costo' WHERE idParqueo='$idParqueo'";
             $transaccion->guardarBD($consultaSQLSalida, "actualizar"); 
         }
-        header("location:index.php");      
+        header("location:mostrarCosto.php");      
     }
 ?>
