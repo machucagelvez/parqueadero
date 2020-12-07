@@ -44,33 +44,33 @@
             </div>
             <form action="vehiculosMensualidad.php" method="POST">
                 <div class="form-group row justify-content-center">
-                    <label class="col-sm-2 col-form-label">Placa:</label>
+
                     <div class="col-sm-10 col-md-4">
-                        <input type="text" class="form-control" name="placa">
+                        <input type="text" class="form-control" placeholder="Placa" name="placa">
                     </div>
                 </div>
                 <div class="form-group row justify-content-center">
-                    <label class="col-sm-2 col-form-label">Marca:</label>
+
                     <div class="col-sm-10 col-md-4">
-                        <input type="text" class="form-control" name="marca">
+                        <input type="text" class="form-control" placeholder="Marca" name="marca">
                     </div>
                 </div>
                 <div class="form-group row justify-content-center">
-                    <label class="col-sm-2 col-form-label">Modelo:</label>
+
                     <div class="col-sm-10 col-md-4">
-                        <input type="number" class="form-control" name="modelo">
+                        <input type="number" class="form-control" placeholder="Modelo" name="modelo">
                     </div>
                 </div>
                 <div class="form-group row justify-content-center">
-                    <label class="col-sm-2 col-form-label">Color:</label>
+
                     <div class="col-sm-10 col-md-4">
-                        <input type="text" class="form-control" name="color">
+                        <input type="text" class="form-control" placeholder="Color" name="color">
                     </div>
                 </div>
                 <div class="form-group row justify-content-center">
-                    <label class="col-sm-2 col-form-label">Nombre del conductor:</label>
+
                     <div class="col-sm-10 col-md-4">
-                        <input type="text" class="form-control" name="nombreConductor">
+                        <input type="text" class="form-control" placeholder="Nombre del conductor" name="nombreConductor">
                     </div>
                 </div>
                 <div class="row justify-content-center">
